@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <link rel="stylesheet" href="../gestao-financeira/assets/libraries/resources/styles/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> Gráficos</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="btn-container">
+            <button id="btnCadastrarDespesa" class="btn btn-primary">Cadastrar Despesa</button>
+            <button id="btnCadastrarEntrada" class="btn btn-primary">Cadastrar Entrada</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="expenseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Cadastrar</h2>
+                <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="expenseForm">
+                    <div class="form-group">
+                        <label for="expenseTitle">Título:</label>
+                        <input type="text" class="form-control" id="expenseTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="expenseValue">Valor:</label>
+                        <input type="text" class="form-control" id="expenseValue">
+                    </div>
+                    <div class="form-group">
+                        <label for="expenseType">Tipo:</label>
+                        <select class="form-control" id="expenseType">
+                            <option value="1">Despesa</option>
+                            <option value="2">Ganho</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../gestao-financeira/assets/libraries/resources/scripts/index.js"></script>
+</body>
+</html>
