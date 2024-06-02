@@ -10,7 +10,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #f8f9fa;
+  background-color: #727272;
   padding-top: 20px;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .sidebar a:hover {
-  background-color: #e9ecef;
+  background-color: #b1b1b1;
 }
 
 .content {
