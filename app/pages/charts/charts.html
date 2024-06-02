@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Despesas e Entradas</title>
+    <link rel="stylesheet" href="/gestao-financeira/app/pages/charts/charts.css">
+    <!-- ECharts Library -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="/gestao-financeira/index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html"><i class="fas fa-chart-bar"></i> Gráficos</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <h1>Gráficos de Despesas e Entradas</h1>
+            <div id="mainChart" class="chart"></div>
+            <div id="typeChart" class="chart"></div>
+        </div>
+    </div>
+    
+    <script src="/gestao-financeira/app/pages/charts/charts.js"></script>
+</body>
+</html>
