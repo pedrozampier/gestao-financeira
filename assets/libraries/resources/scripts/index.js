@@ -62,5 +62,65 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reseta o formulário
         expenseForm.reset();
     });
+
+    function formataDados(data){
+        let timeSeries = data['Time Series (Daily)'];
+
+        let dates = Object.keys(timeSeries).reverse();
+        let values = dates.map(date => parseFloat(timeSeries[date]['4. close']));
+
+        renderChart(dates, values);
+    }
+
+    let chart = echarts.init(document.getElementById('main'));
+
+            // Função para buscar dados da API
+            async function fetchData() {
+                try {
+                    let response = await fetch('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=PETR4.SA&apikey=I67ROA0OG2A40859');
+                    let data = await response.json();
+                    formataDados(data);
+
+                    localStorage.setItem('dadosAcoes', JSON.stringify(data));
+
+                } catch (error) {
+
+                    let data = localStorage.getItem('dadosAcoes')
+
+                    if(data){
+                        formataDados(data);
+                    }else{
+                        console.error('Erro ao buscar dados da API:', error);
+                    }
+                }
+            }
+
+            // Função para renderizar o gráfico
+            function renderChart(dates, values) {
+                let option = {
+                    title: {
+                        text: 'Preço Diário da Ação PETR4.SA'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: dates
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [{
+                        data: values,
+                        type: 'line'
+                    }]
+                };
+
+                chart.setOption(option);
+            }
+
+            // Chama a função para buscar e renderizar os dados
+            fetchData();
   });
   
