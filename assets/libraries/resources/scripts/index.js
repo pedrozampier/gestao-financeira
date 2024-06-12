@@ -24,42 +24,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
   
-    // Adiciona um evento de entrada para o campo de valor
     expenseValueInput.addEventListener('input', function() {
         let value = this.value.replace(/\D/g, '');
         value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
         this.value = value;
     });
   
-    // Evento de submissão do formulário
     expenseForm.addEventListener('submit', function(event) {
         event.preventDefault();
   
-        // Obtém os valores dos campos do formulário
         const expenseTitle = document.querySelector('#expenseTitle').value;
         const expenseValue = document.querySelector('#expenseValue').value;
         const expenseType = document.querySelector('#expenseType').value;
   
-        // Cria um objeto com os valores do formulário
         const expenseData = {
             title: expenseTitle,
             value: expenseValue,
             type: expenseType
         };
   
-        // Obtém os dados existentes do local storage ou um array vazio se não houver dados
         let expenses = JSON.parse(localStorage.getItem('expenses')) || [];
   
-        // Adiciona o novo dado ao array de despesas
         expenses.push(expenseData);
   
-        // Salva o array atualizado no local storage
         localStorage.setItem('expenses', JSON.stringify(expenses));
   
-        // Fecha o modal
         modal.classList.remove('show');
   
-        // Reseta o formulário
         expenseForm.reset();
     });
 
@@ -74,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let chart = echarts.init(document.getElementById('main'));
 
-            // Função para buscar dados da API
             async function fetchData() {
                 try {
                     let response = await fetch('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=PETR4.SA&apikey=I67ROA0OG2A40859');
@@ -95,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
 
-            // Função para renderizar o gráfico
             function renderChart(dates, values) {
                 let option = {
                     title: {
@@ -120,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 chart.setOption(option);
             }
 
-            // Chama a função para buscar e renderizar os dados
             fetchData();
   });
   
