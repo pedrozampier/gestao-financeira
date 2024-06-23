@@ -1,6 +1,6 @@
 'use strict';
 
-export class Password {
+export class Finance {
     constructor(title, email, description, password) {
         this.title = title;
         this.email = email;

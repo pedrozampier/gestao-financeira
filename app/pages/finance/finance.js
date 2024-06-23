@@ -11,7 +11,7 @@ navButton.addEventListener('click', () => {
 const overlay = document.querySelector('.blur');
 
 function warning() {
-  alert('Por questões de segurança, escondemos os detalhes caso tenha deixado a página aberta');
+  alert('Ainda está aqui?');
   if (confirm('Deseja continuar na página?')) {
     overlay.style.display = 'none';
     setTimeout(applyBlur, 30000);

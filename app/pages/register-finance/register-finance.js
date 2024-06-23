@@ -10,16 +10,18 @@ navButton.addEventListener('click', function () {
     navCollapse.classList.toggle('show');
 });
 
-const registerFinance = function (title, value, type) {
+const registerFinance = function (title, value, type, description) {
     return {
         title: title,
-        value: parseFloat(value),
+        value: parseFloat(value.replace(/\./g, '').replace(',', '.')),
         type: type,
+        description: description,
         id: `${btoa(title)}`
     };
 };
 
 const titleData = document.getElementById('input-title-id');
+const description = document.getElementById('input-description-id');
 const valueData = document.getElementById('input-value-id');
 const typeData = document.getElementById('select-type-id');
 
@@ -31,7 +33,7 @@ generateButton.addEventListener('click', () => {
         return;
     }
     const title = titleData.value.charAt(0).toUpperCase() + titleData.value.slice(1);
-    const newFinance = registerFinance(title, valueData.value, typeData.value);
+    const newFinance = registerFinance(title, valueData.value, typeData.value, description.value);
 
     $.ajax({
         url: url,
@@ -46,3 +48,15 @@ generateButton.addEventListener('click', () => {
         }
     });
 });
+
+valueData.addEventListener('input', (e) => {
+    e.target.value = formatReal(e.target.value);
+});
+
+function formatReal(value) {
+    value = value.replace(/\D/g, '');
+    value = (value / 100).toFixed(2) + '';
+    value = value.replace('.', ',');
+    value = value.replace(/(\d)(?=(\d{3})+\,)/g, '$1.');
+    return value;
+}

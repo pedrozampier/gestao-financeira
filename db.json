@@ -19,27 +19,24 @@
   ],
   "finances": [
     {
-      "title": "Salário",
-      "value": 5000,
-      "type": "Entrada",
-      "id": "c2FsYXJpbw=="
-    },
-    {
-      "title": "Aluguel",
-      "value": 1500,
-      "type": "Saída",
-      "id": "YWx1Z3VlbA=="
-    },
-    {
       "title": "Carro",
       "value": 20000,
       "type": "Saída",
+      "description": "Carro para ir para o trabalho",
       "id": "Q2Fycm8="
     },
     {
-      "title": "Moto",
+      "title": "Salário",
       "value": 10000,
+      "type": "Entrada",
+      "description": "Salário mensal",
+      "id": "U2Fs4XJpbw=="
+    },
+    {
+      "title": "Moto",
+      "value": 11000,
       "type": "Saída",
+      "description": "Moto para lazer",
       "id": "TW90bw=="
     }
   ]
