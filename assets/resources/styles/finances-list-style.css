@@ -1,0 +1,98 @@
+body {
+    background-color: #FFF;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    margin-right: 3rem;
+    color: #6c757d;
+}
+
+.navbar-brand {
+    margin-right: 3rem;
+}
+
+.search {
+    background-color: #9f64ed;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.search input[type="text"] {
+    background-color: #F8F8FF;
+    border-radius: 10px;
+    border: none;   
+    padding: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin-right: 10px;
+}
+
+.search input[type="submit"] {
+    background-color: #F8F8FF;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 70px;
+    margin-top: 30px;
+}
+
+.block-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.block-link:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border: 2px solid #696969;
+    border-radius: 15px;
+    padding: 50px;
+    max-width: 330px;
+    width: 100%;
+    margin: 10px;
+}
+
+.block h3 {
+    margin-top: 0;
+}
+
+.block p {
+    margin-bottom: 0;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#financeChart {
+    width: 100% !important;
+    height: auto !important;
+}

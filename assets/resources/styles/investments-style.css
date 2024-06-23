@@ -1,0 +1,12 @@
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#investmentChart {
+    width: 100% !important;
+    height: auto !important;
+}

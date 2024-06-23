@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
-    <link rel="stylesheet" href="../gestao-financeira/assets/libraries/resources/styles/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+  <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/resources/styles/index-style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
 </head>
+
 <body>
-    <div class="sidebar">
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link active" href="#"><i class="fas fa-home"></i> Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/gestao-financeira/app/pages/charts/charts.html"><i class="fas fa-chart-bar"></i> Gráficos</a>
-            </li>
-        </ul>
-    </div>
 
-    <div class="content">
-        <div class="btn-container">
-            <button id="btnCadastrarDespesa" class="btn btn-primary">Cadastrar Despesa</button>
-            <button id="btnCadastrarEntrada" class="btn btn-primary">Cadastrar Entrada</button>
-        </div>
-        <div id="main" style="width: 600px;height:400px;"></div>
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom border-secondary">
+    <img onclick="redirectPage(this)" src="/assets/resources/images/logo.png" alt="Logo do site" width="150">
+    <button id="nav-toggler-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-bar"
+      aria-controls="nav-bar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-bar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/app/pages/finances-list/finances-list.html">INÍCIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/app/pages/register-finance/register-finance.html">CADASTRAR VALORES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/app/pages/investments/investments.html">INVESTIMENTOS</a>
+      </li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- Modal -->
-    <div class="modal" id="expenseModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Cadastrar</h2>
-                <button class="close-button">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form id="expenseForm">
-                    <div class="form-group">
-                        <label for="expenseTitle">Título:</label>
-                        <input type="text" class="form-control" id="expenseTitle">
-                    </div>
-                    <div class="form-group">
-                        <label for="expenseValue">Valor:</label>
-                        <input type="text" class="form-control" id="expenseValue">
-                    </div>
-                    <div class="form-group">
-                        <label for="expenseType">Tipo:</label>
-                        <select class="form-control" id="expenseType">
-                            <option value="1">Despesa</option>
-                            <option value="2">Ganho</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
-                </form>
-            </div>
-        </div>
+  <div class="container login-container">
+    <div class="login-section">
+      <img src="/assets/resources/images/logo.png" alt="Logo do site" width="150">
+      <div>
+        <input name="email-input" type="email" class="login-input" placeholder="Endereço de email">
+      </div>
+      <div>
+        <input id="password-input" type="password" class="login-input" placeholder="Senha mestre">
+      </div>
+      <button id="login-button" class="login-button">LOGIN</button>
+      <div>
+        OU <a href="/app/pages/register-account/register-account.html" class="create-account">CRIAR CONTA</a>
+      </div>
+
     </div>
+  </div>
+  <div id="alert-box" class="alert-box"></div>
 
-    <script src="../gestao-financeira/assets/libraries/resources/scripts/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    function redirectPage(element) {
+      (getComputedStyle(element).backgroundColor !== 'rgb(0, 0, 0)') ? element.style.backgroundColor = 'black' : element.style.backgroundColor = 'white';
+    }
+  </script>
+  <script src="index.js"></script>
 </body>
+
 </html>

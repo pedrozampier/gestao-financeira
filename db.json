@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "Zampa",
+      "email": "pedro@gmail.com",
+      "passwordMaster": "3C$]yXFH34]x_n5",
+      "cpf": "095.159.349-82",
+      "phone": "(42) 99972-7909",
+      "id": 1
+    },
+    {
+      "name": "zampa",
+      "email": "zampa@gmail.com",
+      "passwordMaster": "pedropedro",
+      "cpf": "095.159.349-82",
+      "phone": "(42) 99972-7909",
+      "id": 2
+    }
+  ],
+  "finances": [
+    {
+      "title": "Salário",
+      "value": 5000,
+      "type": "Entrada",
+      "id": "c2FsYXJpbw=="
+    },
+    {
+      "title": "Aluguel",
+      "value": 1500,
+      "type": "Saída",
+      "id": "YWx1Z3VlbA=="
+    },
+    {
+      "title": "Carro",
+      "value": 20000,
+      "type": "Saída",
+      "id": "Q2Fycm8="
+    },
+    {
+      "title": "Moto",
+      "value": 10000,
+      "type": "Saída",
+      "id": "TW90bw=="
+    }
+  ]
+}

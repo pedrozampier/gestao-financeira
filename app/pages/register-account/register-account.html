@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Registrar-se</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/resources/styles/register-account-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom border-secondary">
+        <a class="navbar-brand" href="finances-list.html"><img src="/assets/resources/images/logo.png"
+                alt="Logo do site" width="150"></a>
+        <button id="nav-toggler-button" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/app/pages/finances-list/finances-list.html">INÍCIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/app/pages/register-password/register-password.html">CADASTRAR VALORES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/app/pages/investments/investments.html">INVESTIMENTOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container login-container">
+        <div class="login-section">
+            <img src="/assets/resources/images/logo.png" alt="Logo do site" width="150">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nome" required
+                        oninvalid="setCustomValidity('Por favor, preencha o campo de nome.')"
+                        oninput="setCustomValidity('')">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Endereço de email" required
+                        oninvalid="setCustomValidity('Por favor, preencha um endereço de email válido.')"
+                        oninput="setCustomValidity('')">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Senha mestre" required pattern=".{8,}"
+                        oninvalid="setCustomValidity('A senha deve conter no mínimo 8 caracteres.')"
+                        oninput="setCustomValidity('')">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="CPF" required pattern="[0-9]{11}"
+                        oninvalid="setCustomValidity('Por favor, insira um CPF válido com 11 dígitos numéricos.')"
+                        oninput="setCustomValidity('')">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Número de Telefone" required
+                        pattern="[0-9]{10,}"
+                        oninvalid="setCustomValidity('Por favor, insira um número de telefone válido com no mínimo 10 dígitos numéricos.')"
+                        oninput="setCustomValidity('')">
+                </div>
+                <button id="register-button" class="btn btn-primary">CRIAR CONTA</button>
+            </form>
+            <div>
+                OU <a href="/index.html" class="create-account">FAZER LOGIN</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/libraries/jquery/jquery.mask.js"></script>
+    <script type="module" src="register-account.js"></script>
+</body>
+
+</html>

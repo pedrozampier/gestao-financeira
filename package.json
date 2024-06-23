@@ -1,0 +1,14 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "https://www.figma.com/proto/3kJKszHBhxdvMal2AvmNhv/web2?node-id=1-2&starting-point-node-id=1%3A2",
+  "main": "index.js",
+  "scripts": {
+    "json-server": "json-server --watch db.json --port 3000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}

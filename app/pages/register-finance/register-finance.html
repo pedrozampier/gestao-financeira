@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Registrar Valores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/resources/styles/register-finance-style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom border-secondary">
+        <a class="navbar-brand" href="/app/pages/finances-list/finances-list.html"><img
+                src="/assets/resources/images/logo.png" alt="Logo do site" width="150"></a>
+        <button id="nav-toggler-button" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/app/pages/finances-list/finances-list.html">INÍCIO</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/app/pages/register-finance/register-finance.html">CADASTRAR VALORES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/app/pages/investments/investments.html">INVESTIMENTOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container register-container">
+        <div class="register-section">
+            <div>
+                <input id="input-title-id" type="text" class="register-input" placeholder="Título">
+            </div>
+            <div>
+                <input id="input-value-id" type="number" class="register-input" placeholder="Valor">
+            </div>
+            <div>
+                <select id="select-type-id" class="register-input">
+                    <option value="" disabled selected>Selecione o tipo</option>
+                    <option value="Entrada">Entrada</option>
+                    <option value="Saída">Saída</option>
+                </select>
+            </div>
+            <button id="register-button" class="register-button">REGISTRAR VALOR</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/app/pages/register-finance/register-finance.js"></script>
+</body>
+
+</html>
