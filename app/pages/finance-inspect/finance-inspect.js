@@ -16,7 +16,7 @@ function warning() {
     overlay.style.display = 'none';
     setTimeout(applyBlur, 30000);
   } else {
-    window.location.href = '/app/pages/finances-list/finances-list.html';
+    window.location.href = '/gestao-financeira/app/pages/finances-list/finances-list.html';
   }
 }
 

@@ -36,7 +36,7 @@ document.getElementById('login-button').onclick = function () {
 
   arrayMails.forEach(user => {
     if (user.email == email && user.password == password) {
-      window.location.href = '/app/pages/finances-list/finances-list.html';
+      window.location.href = '/gestao-financeira/app/pages/finances-list/finances-list.html';
       loged = true;
       const logedAtTime = {
         date: new Date(),

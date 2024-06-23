@@ -47,6 +47,6 @@ registerButton.addEventListener('click', () => {
   });
 
   if (code === '123') {
-    window.location.href('../finances-list/finances-list.html')
+    window.location.href('/gestao-financeira/app/pages/finances-list/finances-list.html')
   };
 });

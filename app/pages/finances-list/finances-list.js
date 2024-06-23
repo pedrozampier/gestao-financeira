@@ -1,6 +1,6 @@
 'use strict';
 
-if (!localStorage.getItem('loged')) window.location.href = '/index.html';
+if (!localStorage.getItem('loged')) window.location.href = '/gestao-financeira/index.html';
 
 const url = 'http://localhost:3000/finances';
 const navButton = document.getElementById('nav-toggler-button');
@@ -15,7 +15,7 @@ function createBlock(title_content, value_content, type_content, id) {
     let new_div = document.createElement('div');
     let new_link = document.createElement('a');
 
-    new_link.setAttribute('href', `/app/pages/finance/finance.html?id=${id}`);
+    new_link.setAttribute('href', `/gestao-financeira/app/pages/finance-inspect/finance-inspect.html?id=${id}`);
     new_link.classList.add('block-link');
     new_div.classList.add('block');
 

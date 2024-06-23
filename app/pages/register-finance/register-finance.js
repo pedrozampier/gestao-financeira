@@ -1,6 +1,6 @@
 'use strict';
 
-if (!localStorage.getItem('loged')) window.location.href = '/index.html';
+if (!localStorage.getItem('loged')) window.location.href = '/gestao-financeira/index.html';
 
 const url = 'http://localhost:3000/finances';
 const navButton = document.getElementById('nav-toggler-button');
@@ -41,7 +41,7 @@ generateButton.addEventListener('click', () => {
         contentType: 'application/json',
         data: JSON.stringify(newFinance),
         success: function () {
-            window.location.href = '/app/pages/finances-list/finances-list.html';
+            window.location.href = '/gestao-financeira/app/pages/finances-list/finances-list.html';
         },
         error: function (error) {
             alert('Erro ao cadastrar valor. Erro: ' + error);

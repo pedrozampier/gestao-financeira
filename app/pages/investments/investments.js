@@ -1,8 +1,9 @@
 'use strict';
 
+if (!localStorage.getItem('loged')) window.location.href = '/gestao-financeira/index.html';
+
 // Dados de exemplo para o gráfico
 const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'];
-const data = [1500, 1800, 2000, 1700, 2100, 1900];
 
 // URL da API da Alpha Vantage
 const apiUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=PETR4.SA&apikey=I67ROA0OG2A40859';

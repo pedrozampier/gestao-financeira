@@ -15,6 +15,14 @@
       "cpf": "095.159.349-82",
       "phone": "(42) 99972-7909",
       "id": 2
+    },
+    {
+      "name": "Digdin",
+      "email": "digdin@gmail.com",
+      "passwordMaster": "senhaforte",
+      "cpf": "095.159.349-82",
+      "phone": "(42) 99972-7909",
+      "id": 3
     }
   ],
   "finances": [
@@ -38,6 +46,13 @@
       "type": "Saída",
       "description": "Moto para lazer",
       "id": "TW90bw=="
+    },
+    {
+      "title": "Teste",
+      "value": 122.33,
+      "type": "Saída",
+      "description": "teste",
+      "id": "VGVzdGU="
     }
   ]
 }
