@@ -23,6 +23,14 @@
       "cpf": "095.159.349-82",
       "phone": "(42) 99972-7909",
       "id": 3
+    },
+    {
+      "name": "Cleber",
+      "email": "cleber@gmail.com",
+      "passwordMaster": "cleber1234",
+      "cpf": "095.159.349-82",
+      "phone": "(42) 99972-7909",
+      "id": 4
     }
   ],
   "finances": [
@@ -53,6 +61,20 @@
       "type": "Saída",
       "description": "teste",
       "id": "VGVzdGU="
+    },
+    {
+      "title": "Jetsky",
+      "value": 45000,
+      "type": "Saída",
+      "description": "Lazer",
+      "id": "SmV0c2t5"
+    },
+    {
+      "title": "Loteria",
+      "value": 10000,
+      "type": "Entrada",
+      "description": "Sorte",
+      "id": "TG90ZXJpYQ=="
     }
   ]
 }

@@ -24,6 +24,10 @@ const userValues = ($('.form-control').children()).prevObject;
 const registerButton = document.getElementById('register-button');
 
 registerButton.addEventListener('click', () => {
+  if (!userValues[0].value || !userValues[1].value || !userValues[2].value || !userValues[3].value || !userValues[4].value) {
+    return;
+  }
+
   let code
   const payload = new User(
     userValues[0].value,
