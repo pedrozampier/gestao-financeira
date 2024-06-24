@@ -4,6 +4,8 @@ Figma: https://www.figma.com/file/A4x9HapOrYXhZzyund1CC5/Untitled?type=design&no
 
 # GitHub Pages
 
+url: https://pedrozampier.github.io/gestao-financeira/
+
 ## Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
 #### RA1 - Utilizar Frameworks CSS para estilização de elementos HTML e criação de layouts responsivos.
